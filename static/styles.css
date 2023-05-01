@@ -1,0 +1,93 @@
+/* styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 600px; /* Make the form wider */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px; /* Make the target review box taller */
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* styles.css */
+/* ... (other styles remain the same) ... */
+
+.message {
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: rgba(128, 128, 128, 0.1); /* Semi-transparent grey box */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+
+.success {
+    color: #4CAF50;
+}
+
+.fail {
+    color: #f44336;
+}
+
+.message span {
+    font-size: 24px;
+}
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Review Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Review Checker</h1>
+    <form method="POST">
+        <label for="url">URL:</label>
+        <input type="text" name="url" id="url" value="{{ form_data.url if form_data.url else 'gumroad.com' }}" required>
+        <br>
+        <label for="target_text">Target Review:</label>
+        <textarea name="target_review" id="target_text" required>{{ form_data.target_review if form_data.target_review else 'The seller here takes the code from pirated code sharing sites and sells it, scam.' }}</textarea>
+        <br>
+        <label for="target_text">Author:</label>
+        <input type="text" name="target_author" id="target_author" value="{{ form_data.target_author if form_data.target_author else 'Kaovodich' }}" required>
+        <br>
+        <button type="submit">Check</button>
+    </form>
+    {% if result != None %}
+        <div class="message {% if not result %}fail{% else %}success{% endif %}">
+            The target text is {% if not result %}not{% endif %} present in the reviews.
+            <span>{% if not result %}&#10060;{% else %}&#9989;{% endif %}</span>
+        </div>
+    {% endif %}
+</body>
+</html>
